@@ -25,7 +25,12 @@ try:
     column_names = df.columns.tolist()  # Extract columns name
 
     # Create a drop-down list to select column
-    selected_column = st.selectbox("🔽 اختر عمودًا من البيانات:", column_names)
+    st.markdown("""
+    <div style="text-align: center; font-size: 18px; font-weight: bold;">
+        🔽 اختر عمودًا من البيانات:
+    </div>
+""", unsafe_allow_html=True)
+    selected_column = st.selectbox("", column_names, index=0)
     
     # display selected column name 
     st.markdown(f"""
