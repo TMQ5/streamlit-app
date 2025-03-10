@@ -93,5 +93,20 @@ try:
         </div>
     """, unsafe_allow_html=True)
 
+        # إدخال السعر الأصلي (original_price) كقيمة عشرية
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :أدخل السعر الأصلي💰</div>", unsafe_allow_html=True)
+    
+    original_price = st.number_input("", min_value=0.0, step=0.1, value=1000.0, format="%.2f")  # إدخال قيمة عشريه
+
+    # عرض السعر الأصلي المختار
+    st.markdown(f"""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+             :السعر الأصلي المختار
+            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
+                {original_price:.2f} ريال
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
