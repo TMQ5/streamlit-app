@@ -116,30 +116,6 @@ try:
     else:
         discounted_price_list = ["لا توجد بيانات متاحة"]
 
-    # اختيار السعر المخفض
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>🔽 اختر السعر المخفض:</div>", unsafe_allow_html=True)
-    selected_discounted_price = st.selectbox("", discounted_price_list)
-
-    # حساب نسبة الخصم
-    if isinstance(selected_discounted_price, (int, float)) and original_price > 0:
-        discount_percentage = ((original_price - selected_discounted_price) / original_price) * 100
-    else:
-        discount_percentage = 0.0
-
-    # عرض السعر المخفض والنسبة المحسوبة
-    st.markdown(f"""
-        <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            💲 السعر بعد الخصم:
-            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
-                {selected_discounted_price:.2f} ريال
-            </div>
-            <br>
-            📉 نسبة الخصم:
-            <div style="margin-top: 5px; color:#4CAF50; font-weight: bold; font-size: 20px;">
-                {discount_percentage:.2f}%
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
 
 
      #اختيار نسبة الخصم
