@@ -43,14 +43,6 @@ try:
     # خط فاصل
     st.markdown("---")
 
-    # اختيار العمود
-    column_names = df.columns.tolist()
-    st.markdown("""
-        <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            🔽 اختر عمودًا من البيانات:
-        </div>
-    """, unsafe_allow_html=True)
-    selected_column = st.selectbox("", column_names, index=0)
 
     # عرض البراند والعمود المختارين
     st.markdown(f"""
@@ -59,11 +51,7 @@ try:
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(f"""
-        <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            📊 تم اختيار العمود: <span style="color:#E91E63;">{selected_column}</span>
-        </div>
-    """, unsafe_allow_html=True)
+  
 
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
