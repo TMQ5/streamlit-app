@@ -21,3 +21,17 @@ st.markdown("---")
 st.write("👩‍💻 هنا سيتم عرض البيانات والتحليلات لاحقًا.")
 
 
+
+file_path = "/mnt/data/products_data.csv"
+try:
+    df = pd.read_csv(file_path)
+    column_names = df.columns.tolist()  # Extract columns name
+
+    # Create a drop-down list to select column
+    selected_column = st.selectbox("🔽 اختر عمودًا من البيانات:", column_names)
+    
+    # display selected column name 
+    st.write(f"📊 تم اختيار العمود: **{selected_column}**")
+
+except Exception as e:
+    st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
