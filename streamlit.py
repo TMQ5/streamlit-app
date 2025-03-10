@@ -23,7 +23,7 @@ st.write("👩‍💻 هنا سيتم عرض البيانات والتحليلا
 
 
 
-file_path = "/mnt/data/products_data.csv"
+file_path = "products_data.csv"
 try:
     df = pd.read_csv(file_path)
     column_names = df.columns.tolist()  # Extract columns name
