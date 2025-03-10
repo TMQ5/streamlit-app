@@ -24,40 +24,81 @@ file_path = "products_data.csv"
 try:
     # قراءة الملف
     df = pd.read_csv(file_path)
-    
+
     # استخراج قائمة البراندات الفريدة
     if "brand_name" in df.columns:
         brand_list = df["brand_name"].dropna().unique().tolist()
         brand_list.sort()  # ترتيب البراندات أبجديًا
     else:
         brand_list = ["لا توجد بيانات متاحة"]
-    
+
     # اختيار البراند
     st.markdown("""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-             :اختر نوع البراند🏷️
+             🏷️ اختر نوع البراند:
         </div>
     """, unsafe_allow_html=True)
     selected_brand = st.selectbox("", brand_list)
 
+    # عرض البراند المختار
+    st.markdown(f"""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+             🏷️ تم اختيار البراند:
+            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
+                {selected_brand}
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
     # خط فاصل
     st.markdown("---")
 
+    # استخراج قائمة أنواع المكياج الفريدة
+    if "makeup_type" in df.columns:
+        makeup_type_list = df["makeup_type"].dropna().unique().tolist()
+        makeup_type_list.sort()  # ترتيب القيم أبجديًا
+    else:
+        makeup_type_list = ["لا توجد بيانات متاحة"]
 
-    # عرض البراند والعمود المختارين
-    st.markdown(f"""
-    <div style="text-align: center; font-size: 18px; font-weight: bold;">
-         :تم اختيار البراند🏷️
-        <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
-            {selected_brand}
+    # اختيار نوع المكياج
+    st.markdown("""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+             🔽 اختر نوع المكياج:
         </div>
-    </div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+    selected_makeup_type = st.selectbox("", makeup_type_list)
 
+    # عرض نوع المكياج المختار
+    st.markdown(f"""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+             📊 تم اختيار نوع المكياج:
+            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
+                {selected_makeup_type}
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
+    # خط فاصل
+    st.markdown("---")
 
+    # اختيار العمود
+    column_names = df.columns.tolist()
+    st.markdown("""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+            🔽 اختر عمودًا من البيانات:
+        </div>
+    """, unsafe_allow_html=True)
+    selected_column = st.selectbox("", column_names)
 
-  
+    # عرض العمود المختار
+    st.markdown(f"""
+        <div style="text-align: center; font-size: 18px; font-weight: bold;">
+            📊 تم اختيار العمود:
+            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
+                {selected_column}
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
