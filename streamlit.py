@@ -47,7 +47,7 @@ try:
     # عرض البراند والعمود المختارين
     st.markdown(f"""
     <div style="text-align: center; font-size: 18px; font-weight: bold;">
-        🏷️ تم اختيار البراند:
+         :تم اختيار البراند🏷️
         <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
             {selected_brand}
         </div>
