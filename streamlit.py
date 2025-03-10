@@ -142,7 +142,7 @@ try:
     """, unsafe_allow_html=True)
 
 
-     اختيار نسبة الخصم
+     #اختيار نسبة الخصم
     st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>📉 اختر نسبة الخصم:</div>", unsafe_allow_html=True)
     discount_options = list(range(0, 101, 5))  # نسب الخصم من 0% إلى 100% بزيادة 5%
     selected_discount_percentage = st.selectbox("", discount_options)
