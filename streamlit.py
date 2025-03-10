@@ -30,10 +30,10 @@ try:
     # display selected column name 
     st.write(f"📊 تم اختيار العمود: **{selected_column}**")
     st.markdown(f"""
-        <div style="text-align: center;">
-            <h4>📊 تم اختيار العمود: <span style="color:#E91E63;">{selected_column}</span></h4>
+        <div style="text-align: center; font-size: 18px;">
+            تم اختيار العمود: <span style="color:#E91E63; font-weight: bold;">{selected_column}</span>
         </div>
-    """, unsafe_allow_html=True)    
+    """, unsafe_allow_html=True) 
 
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
