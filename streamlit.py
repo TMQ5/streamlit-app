@@ -43,15 +43,14 @@ try:
     # عرض البراند المختار
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-             🏷️ تم اختيار البراند:
+              تم اختيار البراند:
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {selected_brand}
             </div>
         </div>
     """, unsafe_allow_html=True)
 
-    # خط فاصل
-    st.markdown("---")
+ 
 
     # استخراج قائمة أنواع المكياج الفريدة
     if "makeup_type" in df.columns:
@@ -63,7 +62,7 @@ try:
     # اختيار نوع المكياج
     st.markdown("""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-             🔽 اختر نوع المكياج:
+              :اختر نوع المكياج💄
         </div>
     """, unsafe_allow_html=True)
     selected_makeup_type = st.selectbox("", makeup_type_list)
@@ -71,34 +70,15 @@ try:
     # عرض نوع المكياج المختار
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-             📊 تم اختيار نوع المكياج:
+              :تم اختيار نوع المكياج
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {selected_makeup_type}
             </div>
         </div>
     """, unsafe_allow_html=True)
 
-    # خط فاصل
-    st.markdown("---")
 
-    # اختيار العمود
-    column_names = df.columns.tolist()
-    st.markdown("""
-        <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            🔽 اختر عمودًا من البيانات:
-        </div>
-    """, unsafe_allow_html=True)
-    selected_column = st.selectbox("", column_names)
 
-    # عرض العمود المختار
-    st.markdown(f"""
-        <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            📊 تم اختيار العمود:
-            <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
-                {selected_column}
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
 
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
