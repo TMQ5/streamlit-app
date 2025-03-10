@@ -31,7 +31,7 @@ try:
     st.write(f"📊 تم اختيار العمود: **{selected_column}**")
     st.markdown(f"""
     <div style="text-align: center; font-size: 18px;">
-        <h4 style="display: inline;">📊 تم اختيار العمود: </h4>
+        <h4 style="display: inline;"> :تم اختيار العمود 📊 </h4>
         <span style="color:#E91E63; font-weight: bold; font-size: 20px;">{selected_column}</span>
     </div>
 """, unsafe_allow_html=True)
