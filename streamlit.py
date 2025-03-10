@@ -93,7 +93,7 @@ try:
             }
 
             # إرسال البيانات إلى FastAPI
-            api_url = "http://127.0.0.1:8000/predict/"  # تأكد من تشغيل FastAPI محليًا
+            api_url = "https://fastapi-app-8.onrender.com/docs#/default/predict_cluster_predict__post"  
             response = requests.post(api_url, json=input_data)
 
             # عرض النتيجة
