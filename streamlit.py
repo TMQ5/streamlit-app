@@ -24,8 +24,6 @@ try:
     df = pd.read_csv(file_path)
     column_names = df.columns.tolist()  # Extract columns name
 
-    import streamlit as st
-import pandas as pd
 
 # تحميل البيانات
 file_path = "products_data.csv"
