@@ -35,7 +35,7 @@ try:
     # اختيار البراند
     st.markdown("""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            🏷️ اختر نوع البراند:
+             :اختر نوع البراند🏷️
         </div>
     """, unsafe_allow_html=True)
     selected_brand = st.selectbox("", brand_list)
@@ -47,7 +47,7 @@ try:
     # عرض البراند والعمود المختارين
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            🏷️ تم اختيار البراند: <span style="color:#E91E63;">{selected_brand}</span>
+             :تم اختيار البراند 🏷️ <span style="color:#E91E63;">{selected_brand}</span>
         </div>
     """, unsafe_allow_html=True)
 
