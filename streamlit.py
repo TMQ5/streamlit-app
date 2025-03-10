@@ -47,9 +47,13 @@ try:
     # عرض البراند والعمود المختارين
     st.markdown(f"""
     <div style="text-align: center; font-size: 18px; font-weight: bold;">
-         :تم اختيار البراند 🏷️ <span style="color:#E91E63;">{selected_brand}</span>
+        🏷️ تم اختيار البراند:
+        <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
+            {selected_brand}
+        </div>
     </div>
 """, unsafe_allow_html=True)
+
 
 
 
