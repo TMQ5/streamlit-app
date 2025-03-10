@@ -28,7 +28,6 @@ try:
     selected_column = st.selectbox("🔽 اختر عمودًا من البيانات:", column_names)
     
     # display selected column name 
-    st.write(f"📊 تم اختيار العمود: **{selected_column}**")
     st.markdown(f"""
     <div style="text-align: center; font-size: 18px;">
         <h4 style="display: inline;"> :تم اختيار العمود 📊 </h4>
