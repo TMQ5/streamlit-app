@@ -96,7 +96,7 @@ try:
         # إدخال السعر الأصلي (original_price) كقيمة عشرية
     st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :أدخل السعر الأصلي💰</div>", unsafe_allow_html=True)
     
-    original_price = st.number_input("", min_value=0.0, step=1, value=100.0, max_value=1000.0, format="%.2f")  # إدخال قيمة عشريه
+    original_price = st.number_input("", min_value=0.0, step=1.0, value=100.0, max_value=1000.0, format="%.2f")  # إدخال قيمة عشريه
 
     # عرض السعر الأصلي المختار
     st.markdown(f"""
