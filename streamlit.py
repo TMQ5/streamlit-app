@@ -79,14 +79,14 @@ try:
 
 
      # إدخال عدد المراجعات (reviews_number) كقيمة رقمية
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>✍️ أدخل عدد المراجعات:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :أدخل عدد المراجعات⭐</div>", unsafe_allow_html=True)
     
     reviews_number = st.number_input("", min_value=0, step=1, value=10)  # يمكن للمستخدم إدخال رقم فقط
 
     # عرض عدد المراجعات المختار
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            ⭐ عدد المراجعات المختار:
+             :عدد المراجعات المختار
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {reviews_number}
             </div>
