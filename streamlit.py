@@ -9,7 +9,7 @@ st.set_page_config(
 
 # Add a picture in the header
 image_url = "https://i.postimg.cc/zBTBbn7f/Innisfree-2020-Jeju-Color-Picker-Cherry-Blossom-Edition.jpg"
-st.image(image_url, use_column_width=True)
+st.image(image_url, use_container_width=True)
 
 # Top header
 st.markdown("<h1 style='text-align: center; color: #E91E63;'>📢 تحليل أنماط التسوق في نايس ون!</h1>", unsafe_allow_html=True)
