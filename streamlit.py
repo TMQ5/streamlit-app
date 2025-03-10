@@ -129,17 +129,20 @@ try:
     # عرض نسبة الخصم والسعر بعد الخصم
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            📉 نسبة الخصم المختارة:
+             :نسبة الخصم المختارة📉
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {selected_discount_percentage}%
             </div>
             <br>
-            💲 السعر بعد الخصم:
+             :السعر بعد الخصم
             <div style="margin-top: 5px; color:#4CAF50; font-weight: bold; font-size: 20px;">
                 {discounted_price:.2f} ريال
             </div>
         </div>
     """, unsafe_allow_html=True)
 
+
 except Exception as e:
     st.error(f"⚠️ حدث خطأ أثناء تحميل الملف: {e}")
+
+
