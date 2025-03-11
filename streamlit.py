@@ -14,8 +14,7 @@ image_url = "https://i.postimg.cc/zBTBbn7f/Innisfree-2020-Jeju-Color-Picker-Cher
 st.image(image_url, use_container_width=True)
 
 # العنوان الرئيسي
-st.markdown("<h1 style='text-align: center; color: #E91E63;'>!تحليل أنماط التسوق في نايس ون🌸🛍️</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; color: black;'> استكشف تصنيفات العملاء بناءً على سلوك الشراء 🔍</h3>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #E91E63;'>!تحليل فئات منتجات المكياج في نايس ون🌸🛍️</h1>", unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -45,19 +44,19 @@ try:
         makeup_type_list = ["لا توجد بيانات متاحة"]
 
     # اختيار نوع المكياج
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>💄 اختر نوع المكياج:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :اختر نوع المكياج💄</div>", unsafe_allow_html=True)
     selected_makeup_type = st.selectbox("", makeup_type_list)
 
     # إدخال عدد المراجعات
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>⭐ أدخل عدد المراجعات:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :أدخل عدد المراجعات⭐</div>", unsafe_allow_html=True)
     reviews_number = st.number_input("", min_value=0, step=1, value=10)
 
     # إدخال السعر الأصلي
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>💰 أدخل السعر الأصلي:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :أدخل السعر الأصلي💰</div>", unsafe_allow_html=True)
     original_price = st.number_input("", min_value=0.0, step=1.0, value=100.0, format="%.2f")
 
     # اختيار نسبة الخصم
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>📉 اختر نسبة الخصم:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :اختر نسبة الخصم📉</div>", unsafe_allow_html=True)
     discount_options = list(range(0, 101, 5))  # نسب الخصم من 0% إلى 100% بزيادة 5%
     selected_discount_percentage = st.selectbox("", discount_options)
 
@@ -81,7 +80,7 @@ try:
     st.markdown("---")
 
     # زر لإرسال البيانات إلى FastAPI
-    if st.button("🔮 تحليل نمط الشراء"):
+    if st.button(" تحليل نمط الشراء 🔮 "):
         try:
             # بيانات الإدخال التي سيتم إرسالها إلى API
             input_data = {
