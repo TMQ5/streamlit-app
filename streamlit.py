@@ -65,12 +65,12 @@ try:
 
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-             نسبة الخصم المختارة:
+             :نسبة الخصم المختارة
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {selected_discount_percentage}%
             </div>
             <br>
-             السعر بعد الخصم:
+             :السعر بعد الخصم
             <div style="margin-top: 5px; color:#4CAF50; font-weight: bold; font-size: 20px;">
                 {discounted_price:.2f} ريال
             </div>
@@ -80,7 +80,7 @@ try:
     st.markdown("---")
 
     # زر لإرسال البيانات إلى FastAPI
-    if st.button(" تحليل نمط الشراء 🔮 "):
+    if st.button("تنبأ 🔮 "):
         try:
             # بيانات الإدخال التي سيتم إرسالها إلى API
             input_data = {
@@ -102,7 +102,7 @@ try:
 
                 st.markdown(f"""
                     <div style="text-align: center; font-size: 20px; font-weight: bold; color:#E91E63;">
-                        🎯 التصنيف المتوقع لهذا المنتج:
+                        : التصنيف المتوقع لهذا المنتج🎯
                         <br>
                         <span style="font-size: 24px; color:#4CAF50;">{predicted_category}</span>
                     </div>
