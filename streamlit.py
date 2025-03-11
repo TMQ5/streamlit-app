@@ -33,7 +33,7 @@ try:
         brand_list = ["لا توجد بيانات متاحة"]
 
     # اختيار البراند
-    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'>🏷️ اختر نوع البراند:</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-size: 18px; font-weight: bold;'> :اختر نوع البراند🏷️</div>", unsafe_allow_html=True)
     selected_brand = st.selectbox("", brand_list)
 
     # استخراج قائمة أنواع المكياج الفريدة
@@ -65,12 +65,12 @@ try:
 
     st.markdown(f"""
         <div style="text-align: center; font-size: 18px; font-weight: bold;">
-            📉 نسبة الخصم المختارة:
+             نسبة الخصم المختارة:
             <div style="margin-top: 5px; color:#E91E63; font-weight: bold; font-size: 20px;">
                 {selected_discount_percentage}%
             </div>
             <br>
-            💲 السعر بعد الخصم:
+             السعر بعد الخصم:
             <div style="margin-top: 5px; color:#4CAF50; font-weight: bold; font-size: 20px;">
                 {discounted_price:.2f} ريال
             </div>
